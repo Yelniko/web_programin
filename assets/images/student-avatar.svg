@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Робоче місце веброзробника</title>
+  <desc id="desc">Монітор з кодом, чашка кави та рослина на столі</desc>
+  <rect width="640" height="360" rx="24" fill="#e8f1ff"/>
+  <circle cx="530" cy="76" r="42" fill="#c9dcff"/>
+  <rect x="96" y="72" width="348" height="210" rx="14" fill="#19324d"/>
+  <rect x="116" y="92" width="308" height="168" rx="6" fill="#102438"/>
+  <path d="M145 132h112M145 162h214M145 192h146M145 222h190" stroke="#70d6c4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M166 132h42M288 162h35M314 192h40M226 222h38" stroke="#ffc857" stroke-width="12" stroke-linecap="round"/>
+  <path d="M270 282v28h-58v18h174v-18h-58v-28" fill="#19324d"/>
+  <path d="M468 282c-22-42-18-74 6-96 12 30 13 58-6 96Z" fill="#3c9d75"/>
+  <path d="M468 282c32-37 55-43 75-35-14 32-38 44-75 35Z" fill="#55b889"/>
+  <path d="M450 306h132v20H450z" fill="#d59b62"/>
+  <path d="M494 284h56v22h-56z" fill="#f5f7fb"/>
+  <path d="M494 284c4-23 48-23 56 0" fill="#ffc857"/>
+  <path d="M48 326h544" stroke="#d59b62" stroke-width="14" stroke-linecap="round"/>
+</svg>
