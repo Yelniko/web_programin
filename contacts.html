@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Форма зворотного зв'язку та контактні дані навчального лендінгу." />
+    <title>Лабораторна 2 - Контакти</title>
+    <link rel="icon" href="assets/images/favicon.ico" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти до основного контенту</a>
+
+    <header class="site-header">
+        <h1>Навчальний лендінг</h1>
+
+        <nav aria-label="Головна навігація">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="contacts.html" aria-current="page">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section aria-labelledby="contact-title">
+            <h2 id="contact-title">Зв'яжіться з нами</h2>
+
+            <form action="#" method="post">
+                <h3>Форма зворотного зв'язку</h3>
+
+                <div class="form-row">
+                    <label for="name">Ім'я</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Ваше ім'я"
+                        minlength="2"
+                        maxlength="50"
+                        pattern="[А-Яа-яІіЇїЄєҐґA-Za-zÀ-ÿ\s'’-]+"
+                        title="Введіть від 2 до 50 символів: українські або латинські літери, пробіл, тире чи апостроф."
+                        autocomplete="name"
+                        required
+                    />
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Ваш email"
+                        autocomplete="email"
+                        required
+                    />
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Телефон</label>
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        placeholder="+380 (50) 123-45-67"
+                        pattern="\+380\s?\((50|63|66|67|68|73|91|92|93|94|95|96|97|98|99)\)\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}"
+                        title="Введіть український номер у форматі +380 (50) 123-45-67."
+                        autocomplete="tel"
+                        required
+                    />
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Повідомлення</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="10"
+                        maxlength="500"
+                        placeholder="Ваше повідомлення"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="details-title">
+            <h2 id="details-title">Наші контакти</h2>
+            <address>
+                <p>Email: <a href="xoleg2006x@gmail.com">xoleg2006x@gmail.com</a></p>
+                <p>Телефон: <a href="tel:+380965938539">+380965938539</a></p>
+                <p>Адреса: -</p>
+            </address>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Соціальні мережі</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="-">Facebook</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="-">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="-">LinkedIn</a></li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>Навчальний проєкт, Єльнікова Олега 6.1214-пі2</p>
+    </footer>
+</body>
+</html>
