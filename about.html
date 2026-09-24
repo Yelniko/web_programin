@@ -1,57 +1,167 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Інформація про навчальний лендінг та його цілі." />
-    <title>Лабораторна 2 - Про нас</title>
-    <link rel="icon" href="assets/images/favicon.ico" />
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+            name="description"
+            content="Інформація про навчальний лендінг та його цілі."
+    >
+
+    <title>Лабораторна 3 - Про нас</title>
+
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <a class="skip-link" href="#main">Перейти до основного контенту</a>
+<a class="skip-link" href="#main">
+    Перейти до основного контенту
+</a>
 
-    <header class="site-header">
-        <h1>Навчальний лендінг</h1>
+<header class="header">
+    <h1 class="header__title">
+        Навчальний лендінг
+    </h1>
 
-        <nav aria-label="Головна навігація">
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="about.html" aria-current="page">Про нас</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav
+            class="navigation"
+            aria-label="Головна навігація"
+    >
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a
+                        class="navigation__link"
+                        href="index.html"
+                >
+                    Головна
+                </a>
+            </li>
 
-    <main id="main">
-        <article>
-            <header>
-                <h2>Про навчальний проєкт</h2>
-                <p>Цей лендінг створено під час лабораторної роботи № 2 для закріплення базових можливостей HTML.</p>
-            </header>
+            <li class="navigation__item">
+                <a
+                        class="navigation__link navigation__link--active"
+                        href="about.html"
+                        aria-current="page"
+                >
+                    Про нас
+                </a>
+            </li>
 
-            <section aria-labelledby="mission-title">
-                <h3 id="mission-title">Мета проєкту</h3>
-                <p>Навчитися будувати сторінки із семантичних тегів, створювати навігацію між документами та перевіряти введені у форму дані.</p>
-            </section>
+            <li class="navigation__item">
+                <a
+                        class="navigation__link"
+                        href="contacts.html"
+                >
+                    Контакти
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-            <section aria-labelledby="principles-title">
-                <h3 id="principles-title">Наші принципи</h3>
-                <ul>
-                    <li>Структурований і читабельний HTML-код.</li>
-                    <li>Доступність та зрозуміла взаємодія.</li>
-                    <li>Послідовний розвиток навичок через практику.</li>
-                </ul>
-            </section>
-        </article>
-    </main>
+<main id="main" class="main">
+    <section
+            class="about-article"
+            aria-labelledby="about-title"
+    >
+        <h2
+                id="about-title"
+                class="about-article__title"
+        >
+            Про навчальний проєкт
+        </h2>
 
-    <aside>
-        <h2>Навігація проєктом</h2>
-        <p>Перейдіть на <a href="contacts.html">сторінку контактів</a>, щоб надіслати повідомлення.</p>
-    </aside>
+        <p class="about-article__text">
+            Цей лендінг створено під час лабораторної роботи
+            для закріплення базових можливостей HTML та CSS.
+        </p>
 
-    <footer>
-        <p>Навчальний проєкт, Єльнікова Олега 6.1214-пі2</p>
-    </footer>
+        <section
+                class="about-article__section"
+                aria-labelledby="mission-title"
+        >
+            <h3
+                    id="mission-title"
+                    class="about-article__subtitle"
+            >
+                Мета проєкту
+            </h3>
+
+            <p class="about-article__text">
+                Навчитися будувати сторінки із семантичних тегів,
+                створювати навігацію між документами, використовувати
+                методологію BEM та стилізувати сторінки за допомогою CSS.
+            </p>
+        </section>
+    </section>
+
+    <section
+            class="skills"
+            aria-labelledby="principles-title"
+    >
+        <h2
+                id="principles-title"
+                class="skills__title"
+        >
+            Наші принципи
+        </h2>
+
+        <ul class="skills__list">
+            <li class="skills__item">
+                Структурований і читабельний HTML-код.
+            </li>
+
+            <li class="skills__item">
+                Доступність та зрозуміла взаємодія.
+            </li>
+
+            <li class="skills__item">
+                Використання BEM для організації CSS-класів.
+            </li>
+
+            <li class="skills__item">
+                Послідовний розвиток навичок через практику.
+            </li>
+        </ul>
+    </section>
+</main>
+
+<aside
+        class="sidebar sidebar--values"
+        aria-labelledby="values-title"
+>
+    <h2
+            id="values-title"
+            class="sidebar__title"
+    >
+        Цінності
+    </h2>
+
+    <ul class="sidebar__list">
+        <li class="sidebar__item">
+            Якість коду
+        </li>
+
+        <li class="sidebar__item">
+            Доступність
+        </li>
+
+        <li class="sidebar__item">
+            Зрозуміла структура
+        </li>
+    </ul>
+</aside>
+
+<footer class="footer">
+    <p class="footer__text">
+        Навчальний проєкт, Єльнікова Олега 6.1214-пі2
+    </p>
+</footer>
 </body>
 </html>
