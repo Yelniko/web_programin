@@ -1,7 +1,10 @@
 :root {
+    color-scheme: light dark;
+
     --brand: #002b5c;
     --brand-600: #01356f;
     --brand-100: #e6eef6;
+    --on-brand: #ffffff;
 
     --fg: #1f2937;
     --fg-muted: #6b7280;
@@ -19,6 +22,10 @@
     --radius-2: 12px;
     --shadow-1: 0 6px 16px rgba(0, 0, 0, .06);
     --container: 1200px;
+
+    --fs-body: clamp(1rem, 0.94rem + 0.5vw, 1.125rem);
+    --fs-h2: clamp(1.25rem, 1.05rem + 1.2vw, 1.6rem);
+    --fs-h1: clamp(1.6rem, 1.2rem + 2.2vw, 2.2rem);
 }
 
 *,
@@ -33,7 +40,9 @@ html {
 
 body {
     min-height: 100vh;
+    min-height: 100dvh;
     margin: 0;
+    font-size: var(--fs-body);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: var(--fg);
     background: var(--bg);
@@ -85,16 +94,18 @@ ol[class] {
     top: var(--space-4);
 }
 
-/* Основна Grid-сітка сторінки */
+
 .layout {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
-        "header header"
-        "sidenav main"
-        "footer footer";
+        "header"
+        "sidenav"
+        "main"
+        "footer";
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .header {
@@ -128,16 +139,16 @@ ol[class] {
     border-top: 1px solid var(--border);
 }
 
-/* Header і навігація */
 .header__title {
     margin: 0;
     padding: var(--space-4) var(--space-6) 0;
     color: var(--brand);
-    font-size: 1.5rem;
+    font-size: var(--fs-h1);
 }
 
 .nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: var(--space-3);
     padding: var(--space-3) var(--space-6) var(--space-4);
@@ -157,21 +168,20 @@ ol[class] {
 }
 
 .nav__link--cta {
-    margin-left: auto;
-    color: #fff;
+    margin-left: 0;
+    color: var(--on-brand);
     background: var(--brand);
 }
 
 .nav__link--cta:hover,
 .nav__link--cta:focus-visible {
-    color: #fff;
+    color: var(--on-brand);
     background: var(--brand-600);
 }
 
-/* Спільний sidebar */
 .sidebar {
     padding: var(--space-4);
-    background: #fff;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-2);
     box-shadow: var(--shadow-1);
@@ -198,25 +208,32 @@ ol[class] {
     color: var(--brand);
 }
 
-/* Загальні стилі main */
-.main__title,
-.news__title {
+.main__title {
     margin: 0 0 var(--space-6);
-    color: var(--fg);
-    font-size: 1.25rem;
 }
 
-/* Новини на index.html */
+.news__title {
+    margin: 0 0 var(--space-4);
+}
+
+.main__title,
+.news__title,
+.about-article__title,
+.skills__title {
+    font-size: var(--fs-h2);
+}
+
 .news__list {
     display: grid;
     gap: var(--space-6);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 }
 
 .news-card {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-width: 0;
     padding: var(--space-4);
     background: var(--surface);
     border: 1px solid var(--border);
@@ -238,12 +255,16 @@ ol[class] {
 
 .news-card__meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--space-3);
     margin-top: auto;
-    padding-top: var(--space-4);
+    margin-inline: calc(-1 * var(--space-4));
+    margin-bottom: calc(-1 * var(--space-4));
+    padding: var(--space-4);
     border-top: 1px solid var(--border);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 .news-card__date {
@@ -270,18 +291,28 @@ ol[class] {
 /* Зображення в картках */
 .media {
     margin: 0;
+    aspect-ratio: 16 / 9;
+    overflow: clip;
+}
+
+.media > picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .media--framed {
     padding: var(--space-3);
-    background: #fafafa;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-2);
 }
 
 .media__img {
-    aspect-ratio: 16 / 10;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: var(--radius-1);
 }
 
@@ -292,7 +323,6 @@ ol[class] {
     text-align: center;
 }
 
-/* about.html */
 .about-article,
 .skills {
     padding: var(--space-6);
@@ -339,7 +369,7 @@ ol[class] {
     border-radius: var(--radius-1);
 }
 
-/* contacts.html */
+
 .contact-form {
     width: 100%;
     max-width: 640px;
@@ -372,8 +402,8 @@ ol[class] {
     width: 100%;
     padding: var(--space-3) var(--space-4);
     color: var(--fg);
-    background: #fff;
-    border: 1px solid #cbd5e1;
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-1);
     outline: none;
     transition: border-color .2s ease, box-shadow .2s ease;
@@ -412,7 +442,7 @@ ol[class] {
 
 .contact-form__button {
     padding: var(--space-2) var(--space-4);
-    color: #fff;
+    color: var(--on-brand);
     background: var(--brand);
     border: 0;
     border-radius: var(--radius-1);
@@ -435,24 +465,26 @@ ol[class] {
     opacity: .6;
 }
 
-/* Footer */
+
 .footer__inner {
     display: grid;
-    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+    grid-template-columns: 1fr;
     align-items: start;
-    gap: var(--space-6);
+    gap: var(--space-4);
     width: min(calc(100% - 2 * var(--space-6)), var(--container));
     margin-inline: auto;
-    padding: var(--space-6);
+    padding-block: var(--space-6);
 }
 
 .footer__text {
+    order: 2;
     margin: 0;
     color: var(--fg-muted);
     font-size: .9rem;
 }
 
 .footer__contacts {
+    min-width: 0;
     font-style: normal;
 }
 
@@ -472,69 +504,64 @@ ol[class] {
 
 .footer__contacts-item {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content minmax(0, 1fr);
     gap: var(--space-2);
     color: var(--fg-muted);
     font-size: .9rem;
+    overflow-wrap: anywhere;
 }
 
 .footer__label {
     white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 640px) {
     .layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 220px minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
         grid-template-areas:
-            "header"
-            "sidenav"
-            "main"
-            "footer";
-    }
-
-    .sidenav {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        border-right: 0;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-        flex-wrap: wrap;
-    }
-
-    .nav__link--cta {
-        margin-left: 0;
-    }
-
-    .main {
-        padding: var(--space-4);
+            "header header"
+            "sidenav main"
+            "footer footer";
     }
 
     .footer__inner {
-        grid-template-columns: 1fr;
-        width: 100%;
-        padding: var(--space-4);
+        grid-template-columns: 1fr minmax(220px, 1fr);
+    }
+
+    .footer__text {
+        order: initial;
+    }
+
+    .nav__link--cta {
+        margin-left: auto;
     }
 }
 
-@media (max-width: 480px) {
-    .header__title {
-        padding-inline: var(--space-4);
-        font-size: 1.25rem;
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 280px minmax(0, 1fr);
     }
 
-    .nav {
-        padding-inline: var(--space-4);
+    .footer__inner {
+        grid-template-columns: 1fr minmax(280px, 1fr);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b1020;
+        --surface: #101528;
+        --fg: #e7eaf3;
+        --fg-muted: #b7bfd3;
+        --border: #232a3b;
+        --brand: #7fb3ff;
+        --brand-600: #6aa2f0;
+        --brand-100: #17233b;
+        --on-brand: #0b1020;
     }
 
-    .nav__link {
-        padding-inline: var(--space-2);
-    }
-
-    .contact-form,
-    .about-article,
-    .skills {
-        padding: var(--space-4);
+    .news-card__meta {
+        background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
     }
 }

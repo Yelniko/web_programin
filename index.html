@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Останні новини навчального вебпроєкту.">
-    <title>Лабораторна № 4 - Головна</title>
+    <title>Лабораторна № 5 - Головна</title>
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +13,7 @@
     <a class="skip-link" href="#main">Перейти до основного контенту</a>
 
     <header class="header">
-        <h1 class="header__title">Лабораторна № 4</h1>
+        <h1 class="header__title">Лабораторна № 5</h1>
         <nav class="nav" aria-label="Головна навігація">
             <a class="nav__link" href="index.html" aria-current="page">Головна</a>
             <a class="nav__link" href="about.html">Про нас</a>
@@ -56,8 +56,17 @@
 
             <div class="news__list">
                 <article class="news-card">
-                    <figure class="media media--framed">
-                        <img class="media__img" src="assets/images/student-avatar.svg" alt="Ілюстрація навчання веброзробці" width="640" height="360">
+                    <figure class="news-card__media media">
+                        <picture>
+                            <source type="image/avif" srcset="assets/images/placeholder.avif">
+                            <source type="image/webp" srcset="assets/images/placeholder.webp">
+                            <img
+                                    src="assets/images/placeholder.jpg"
+                                    alt="Ілюстрація старту вебпроєкту"
+                                    class="media__img"
+                                    width="640" height="360"
+                                    loading="lazy" decoding="async" />
+                        </picture>
                     </figure>
                     <h3 class="news-card__title">Старт навчального вебпроєкту</h3>
                     <p class="news-card__excerpt">Перші кроки у створенні зрозумілих та доступних вебсторінок.</p>
@@ -68,8 +77,17 @@
                 </article>
 
                 <article class="news-card">
-                    <figure class="media media--framed">
-                        <img class="media__img" src="assets/images/student-avatar.svg" alt="Ілюстрація CSS Grid та Flexbox" width="640" height="360">
+                    <figure class="news-card__media media">
+                        <picture>
+                            <source type="image/avif" srcset="assets/images/placeholder.avif">
+                            <source type="image/webp" srcset="assets/images/placeholder.webp">
+                            <img
+                                    src="assets/images/placeholder.jpg"
+                                    alt="Ілюстрація CSS Grid та Flexbox"
+                                    class="media__img"
+                                    width="640" height="360"
+                                    loading="lazy" decoding="async" />
+                        </picture>
                     </figure>
                     <h3 class="news-card__title">Flexbox і Grid: практика</h3>
                     <p class="news-card__excerpt">Використовуємо сучасні інструменти CSS для побудови макета сторінки.</p>
@@ -80,8 +98,17 @@
                 </article>
 
                 <article class="news-card">
-                    <figure class="media media--framed">
-                        <img class="media__img" src="assets/images/student-avatar.svg" alt="Ілюстрація React" width="640" height="360">
+                    <figure class="news-card__media media">
+                        <picture>
+                            <source type="image/avif" srcset="assets/images/placeholder.avif">
+                            <source type="image/webp" srcset="assets/images/placeholder.webp">
+                            <img
+                                    src="assets/images/placeholder.jpg"
+                                    alt="Ілюстрація React"
+                                    class="media__img"
+                                    width="640" height="360"
+                                    loading="lazy" decoding="async" />
+                        </picture>
                     </figure>
                     <h3 class="news-card__title">React</h3>
                     <p class="news-card__excerpt">Знайомство з технологіями, які допомагають створювати сучасні інтерфейси.</p>
