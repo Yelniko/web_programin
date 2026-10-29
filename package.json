@@ -1,17 +1,19 @@
 {
-  "name": "lab",
+  "name": "web",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yelniko/web_programin.git"
   },
   "keywords": [],
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Yelniko/web_programin/issues"
   },
@@ -20,11 +22,7 @@
     "autoprefixer": "^10.6.1",
     "postcss": "^8.5.31",
     "sass-embedded": "^1.106.1",
-    "vite": "^8.3.5"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "vite": "^8.3.5",
+    "vite-plugin-handlebars": "^2.0.3"
   }
 }

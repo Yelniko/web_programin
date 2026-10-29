@@ -1,96 +1,15 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Інформація про навчальний вебпроєкт та його цілі.">
-    <title>Лабораторна № 5 - Про нас</title>
-    <link rel="icon" href="assets/images/favicon.ico">
-</head>
-<body>
-<div class="layout">
-    <a class="skip-link" href="#main">Перейти до основного контенту</a>
+{{#> layout pageTitle="Про нас" studentGroup="6.1214-пі2" studentEmail="xoleg2006x@gmail.com" }}
+<article class="about-article">
+    <h2 class="about-article__title">Про нашу команду</h2>
+    <p class="about-article__text">Ми — команда студентів, що вивчає Web...</p>
+</article>
 
-    <header class="header">
-        <h1 class="header__title">Лабораторна № 5</h1>
-        <nav class="nav" aria-label="Головна навігація">
-            <a class="nav__link" href="index.html">Головна</a>
-            <a class="nav__link" href="about.html" aria-current="page">Про нас</a>
-            <a class="nav__link nav__link--cta" href="contacts.html">Контакти</a>
-        </nav>
-    </header>
 
-    <aside class="sidenav" aria-label="Додаткова навігація">
-        <section class="sidebar" aria-labelledby="links-title">
-            <h2 id="links-title" class="sidebar__title">Корисні посилання</h2>
-            <ul class="sidebar__list">
-                <li class="sidebar__item">
-                    <a class="sidebar__link" href="https://developer.mozilla.org/uk/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="sidebar" aria-labelledby="values-title">
-            <h2 id="values-title" class="sidebar__title">Цінності</h2>
-            <ul class="sidebar__list">
-                <li class="sidebar__item">Якість коду та прозорість</li>
-                <li class="sidebar__item">Навчання через практику</li>
-                <li class="sidebar__item">Комунікація та підтримка</li>
-            </ul>
-        </section>
-
-        <section class="sidebar" aria-labelledby="social-title">
-            <h2 id="social-title" class="sidebar__title">Соціальні мережі</h2>
-            <ul class="sidebar__list">
-                <li class="sidebar__item"><a class="sidebar__link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li class="sidebar__item"><a class="sidebar__link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li class="sidebar__item"><a class="sidebar__link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-        </section>
-    </aside>
-
-    <main id="main" class="main">
-        <section class="about-article" aria-labelledby="about-title">
-            <h2 id="about-title" class="about-article__title">Про навчальний проєкт</h2>
-            <p class="about-article__text">
-                Цей лендінг створено під час лабораторної роботи для закріплення
-                базових можливостей HTML та CSS.
-            </p>
-
-            <section class="about-article__section" aria-labelledby="mission-title">
-                <h3 id="mission-title" class="about-article__subtitle">Мета проєкту</h3>
-                <p class="about-article__text">
-                    Навчитися будувати сторінки із семантичних тегів, створювати
-                    навігацію між документами, використовувати методологію BEM
-                    та стилізувати сторінки за допомогою CSS.
-                </p>
-            </section>
-        </section>
-
-        <section class="skills" aria-labelledby="principles-title">
-            <h2 id="principles-title" class="skills__title">Наші принципи</h2>
-            <ul class="skills__list">
-                <li class="skills__item">Структурований і читабельний HTML-код.</li>
-                <li class="skills__item">Доступність та зрозуміла взаємодія.</li>
-                <li class="skills__item">Використання BEM для організації CSS-класів.</li>
-                <li class="skills__item">Послідовний розвиток навичок через практику.</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__inner">
-            <p class="footer__text">© Навчальний проєкт, Єльнікова Олега, 6.1214-пі2</p>
-            <address class="footer__contacts" aria-label="Наші контакти">
-                <h2 class="footer__contacts-title">Наші контакти</h2>
-                <ul class="footer__contacts-list">
-                    <li class="footer__contacts-item"><span class="footer__label">Email:</span><a href="mailto:xoleg2006x@gmail.com">xoleg2006x@gmail.com</a></li>
-                    <li class="footer__contacts-item"><span class="footer__label">Телефон:</span><a href="tel:+380965938539">+380 96 593 85 39</a></li>
-                </ul>
-            </address>
-        </div>
-    </footer>
-</div>
-<script type="module" src="/src/main.js"></script>
-</body>
-</html>
+<section class="skills">
+    <h3 class="skills__title">Наші навички</h3>
+    <ul class="skills__list">
+        <li class="skills__item">HTML, CSS, JavaScript</li>
+        <li class="skills__item">React, Node.js</li>
+    </ul>
+</section>
+{{/layout}}
