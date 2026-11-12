@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
+import tailwindcss from '@tailwindcss/vite';
 import handlebars from 'vite-plugin-handlebars'
 
 export default defineConfig({
@@ -10,6 +11,7 @@ export default defineConfig({
     },
     resolve: { alias: { '@': resolve(import.meta.dirname, 'src') } },
     plugins: [
+        tailwindcss(),
         handlebars({
             partialDirectory: resolve(
                 import.meta.dirname,
@@ -18,8 +20,8 @@ export default defineConfig({
             ),
 
             context: {
-                siteName: 'Лабораторна 6',
-                labName: 'Лабораторна № 6',
+                siteName: 'Лабораторна 7',
+                labName: 'Лабораторна № 7',
             },
 
             reloadOnPartialChange: true,

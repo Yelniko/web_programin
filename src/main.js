@@ -1,2 +1,2 @@
-import './styles/main.scss';
-
+import '@/tw.css';
+import '@/styles/main.scss';
