@@ -1,4 +1,4 @@
-@import "tailwindcss" source("../..");
+@import "tailwindcss" source("..");
 
 @layer base {
     h1, h2, h3, h4, h5, h6 {
@@ -14,7 +14,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-layer component {
+@layer components {
     .btn-brand{
         @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg
         text-white! bg-brand-500 hover:bg-brand-600
