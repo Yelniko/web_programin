@@ -12,6 +12,8 @@
 
 .nav{
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-3);
   padding: var(--space-3) var(--space-6) var(--space-4);
   border-top: 1px solid var(--border);
@@ -33,5 +35,28 @@
 
     &:hover,
     &:focus-visible{ background: var(--brand-600); }
+  }
+}
+
+.theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: var(--space-2);
+  border: 0;
+  border-radius: 50%;
+  color: var(--fg);
+  background: transparent;
+  cursor: pointer;
+
+  &:hover{
+    color: var(--brand);
+    background: var(--brand-100);
+  }
+
+  &:focus-visible{
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
   }
 }
