@@ -20,8 +20,8 @@ export default defineConfig({
             ),
 
             context: {
-                siteName: 'Лабораторна 7',
-                labName: 'Лабораторна № 7',
+                siteName: 'Лабораторна 8',
+                labName: 'Лабораторна № 8',
             },
 
             reloadOnPartialChange: true,
