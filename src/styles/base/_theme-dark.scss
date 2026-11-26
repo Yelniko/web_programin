@@ -1,5 +1,5 @@
-@media (prefers-color-scheme: dark){
-  :root{
+:root.dark{
+    color-scheme: dark;
     --bg:#0b1020;
     --surface:#101528;
     --fg:#e7eaf3;
@@ -9,10 +9,4 @@
     --brand-600:#6aa2f0;
     --brand-100:#17233b;
     --brand-meta: color-mix(in srgb, var(--surface) 92%, #fff 8%);
-  }
-
-  .sidebar { background: var(--surface); }
-  .news-card__meta{
-    background: color-mix(in srgb, var(--surface) 92%, #fff 8%);
-  }
 }

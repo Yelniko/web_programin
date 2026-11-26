@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Лабораторна 8 - Про нас</title>
+    <meta name="description" content="Головна сторінка навчального лендінгу: новини, послуги, переваги."/>
+    <link rel="icon" href="/favicon.ico"/>  <script type="module" crossorigin src="/assets/main-BF6_WVy2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-0Xt1lX5F.css">
+</head>
+<body data-page="contacts">
+<div class="layout">
+    <header class="header">
+        <h1 class="header__title">Лабораторна № 8</h1>
+        <nav class="nav">
+            <a href="/index.html" class="nav__link">Головна</a>
+            <a href="/about.html" class="nav__link">Про нас</a>
+            <a href="/contacts.html" class="nav__link nav__link--cta">Контакти</a>
+        </nav>
+        <div class="flex justify-between border border-solid border-[color:var(--border)] space-x-6">
+            <nav class="nav">
+                <a href="/index.html" class="nav__link">Головна</a>
+                <a href="/about.html" class="nav__link">Про нас</a>
+                <a href="/contacts.html" class="nav__link">Контакти</a>
+            </nav>
+            <button id="theme-toggle"
+                    class="
+                            p-2 rounded-full
+                            bg-[color:var(--surface)] hover:bg-[color:var(--surface-alt)]
+                            text-[color:var(--text)] hover:text-[color:var(--accent)]
+                            transition duration-300 ease-in-out
+                            focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)]
+                            cursor-pointer
+                        "
+                    type="button"
+                    aria-label="Переключити тему">
+    
+                <svg id="sun-icon" class="h-8 w-8 block dark:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
+                </svg>
+    
+                <svg id="moon-icon" class="h-8 w-8 hidden dark:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.585.732-3.755A9.726 9.726 0 002.25 12c0 5.385 4.365 9.75 9.75 9.75s9.75-4.365 9.75-9.75c0-.85-.147-1.67-.418-2.438z" />
+                </svg>
+            </button>
+        </div>
+    </header>    <aside class="sidenav">
+        <section class="sidebar sidebar--links" aria-label="Корисні посилання">
+            <h3 class="sidebar__title">Корисні посилання</h3>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="sidebar sidebar--values" aria-label="Цінності">
+            <h3 class="sidebar__title">Цінності</h3>
+            <ul class="sidebar__list">
+                <li class="sidebar__item">Якість коду та прозорість</li>
+                <li class="sidebar__item">Навчання через практику</li>
+                <li class="sidebar__item">Комунікація та підтримка</li>
+            </ul>
+        </section>
+    
+        <section class="sidebar sidebar--social" aria-label="Соціальні мережі">
+            <h3 class="sidebar__title">Соціальні мережі</h3>
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Facebook">Facebook</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="Instagram">Instagram</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#" aria-label="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </section>
+    </aside>    <main class="main">
+        <h2 class="main__title">Зв'яжіться з нами</h2>
+        <form class="contact-form" action="#" method="post">
+            <div class="contact-form__item">
+                <label for="name" class="contact-form__label">Ім’я</label>
+                <input type="text" id="name" name="name" class="contact-form__input" required placeholder="Ваше ім’я">
+            </div>
+            <div class="contact-form__item">
+                <label for="email" class="contact-form__label">Email</label>
+                <input type="email" id="email" name="email" class="contact-form__input" required placeholder="Ваш email">
+            </div>
+            <div class="contact-form__item">
+                <label for="msg" class="contact-form__label">Повідомлення</label>
+                <textarea id="msg" name="msg" class="contact-form__textarea" placeholder="Ваше повідомлення"></textarea>
+            </div>
+            <button type="submit" class="contact-form__button">Надіслати</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__text">© 2026 Група <span class="footer__group-name">6.1214-пі2</span></p>
+    
+    
+            <address class="footer__contacts" aria-label="Наші контакти">
+                <h3 class="footer__contacts-title">Наші контакти</h3>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Email:</span>
+                        <a class="footer__link" href="xoleg2006x@gmail.com">xoleg2006x@gmail.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Телефон:</span>
+                        <a class="footer__link" href="0975938537">+38 (050) 111-22-33</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <span class="footer__label">Адреса:</span>
+                        <span>-</span>
+                    </li>
+                </ul>
+            </address>
+        </div>
+    </footer></div>
+</body>
+</html>
